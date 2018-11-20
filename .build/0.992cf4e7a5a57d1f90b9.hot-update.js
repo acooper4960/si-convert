@@ -1,0 +1,1 @@
+exports.id=0,exports.modules={"./server/server.js":function(e,s,t){"use strict";t.r(s);var n=t("express"),r={name:"",symbol:"",type:""},o=function(e,s,t){return t*r["".concat(e,">").concat(s)]},u=t.n(n)()();u.get("/units/si",function(e,s){s.send({Value:o("m","mm",1e3)})});s.default=u}};

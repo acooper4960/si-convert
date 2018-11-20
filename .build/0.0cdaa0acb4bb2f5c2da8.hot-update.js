@@ -1,0 +1,1 @@
+exports.id=0,exports.modules={"./server/server.js":function(e,n,i){"use strict";i.r(n);var s=i("express"),r=i.n(s);var t=i("./conversion-data.json");Math.PI;initizalizeConversions=function(){return t};(void 0).initizalizeConversions();var o=function(e,n,i){},a=r()();a.get("/units/si",function(e,n){n.send({Value:o("m","mm",1e3)})});n.default=a}};

@@ -1,0 +1,1 @@
+exports.id=0,exports.modules={"./server/index.js":function(e,r,t){var n=t("http"),s=t("./server/server.js"),o=n.createServer(s),i=s;o.listen(3e3,function(){return console.log("listening on port ".concat(3e3))}),e.hot.accept("./server/server.js",function(){o.removeListener("request",i),o.on("request",s),i=s})},http:function(e,r){e.exports=require("http")}};

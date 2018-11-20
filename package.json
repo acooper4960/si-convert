@@ -1,0 +1,46 @@
+{
+  "name": "si-convert",
+  "version": "1.0.0",
+  "description": "A simple restful api for converting SI units",
+  "main": "server.js",
+  "scripts": {
+    "test": "webpack -w --progress --colors --config webpack-test.config.js",
+    "start:server": "rm -rf ./build && webpack --config webpack.config.server.js --display-error-details",
+    "debug": "node --inspect server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acooper4960/si-convert.git"
+  },
+  "keywords": [
+    "SI",
+    "Express",
+    "Mocha",
+    "Chai"
+  ],
+  "author": "Alex Cooper",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acooper4960/si-convert/issues"
+  },
+  "homepage": "https://github.com/acooper4960/si-convert#readme",
+  "dependencies": {
+    "@babel/core": "^7.1.5",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.2.0",
+    "express": "^4.16.4",
+    "http": "0.0.0",
+    "start-server-webpack-plugin": "^2.2.5",
+    "webpack-node-externals": "^1.7.2",
+    "webpack-shell-plugin": "^0.5.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.1.5",
+    "mocha": "^5.2.0",
+    "mocha-webpack": "^1.1.0",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2"
+  }
+}

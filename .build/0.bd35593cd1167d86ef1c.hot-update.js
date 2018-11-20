@@ -1,0 +1,1 @@
+exports.id=0,exports.modules={"./server/server.js":function(e,s,o){"use strict";o.r(s);var r=o("express"),t=o.n(r)()();t.get("/api",function(e,s){s.send({message:"woo"})}),t.get("/",function(e,s){s.send({message:"woo"})}),s.default=t}};
