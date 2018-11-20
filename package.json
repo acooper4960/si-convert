@@ -5,9 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "webpack -w --progress --colors --config webpack-test.config.js",
-    "start": "rm -rf ./build && webpack --config webpack.config.server.js --display-error-details",
-    "debug": "node --inspect server/server.js",
-    "heroku-prebuild": "npm install --dev"
+    "start": "npm install rm -rf ./build && webpack --config webpack.config.server.js --display-error-details",
+    "debug": "node --inspect server/server.js"
   },
   "repository": {
     "type": "git",
