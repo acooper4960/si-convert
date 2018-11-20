@@ -5,7 +5,7 @@ const PORT = 3000;
 
 const server = http.createServer(app)
 let currentApp = app
-server.listen(process.env.PORT || PORT, () => console.log(`listening on port ${process.env.PORT || PORT}`));
+server.listen(process.env.PORT || PORT, '0.0.0.0', () => console.log(`listening on port ${PORT}`));
 if (module.hot) {
   module.hot.accept('./server', () => {
     server.removeListener('request', currentApp)
