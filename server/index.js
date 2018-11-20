@@ -2,7 +2,7 @@ import http from 'http'
 import app from './server'
 
 //const PORT = process.env.PORT || 3000;
-let PORT = process.env.PORT || 3110;
+let PORT = process.env.PORT || 8080;
 try {
   const server = http.createServer(app)
   let currentApp = app
