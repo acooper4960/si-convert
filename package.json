@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "webpack -w --progress --colors --config webpack-test.config.js",
-    "start:server": "rm -rf ./build && webpack --config webpack.config.server.js --display-error-details",
+    "start": "rm -rf ./build && webpack --config webpack.config.server.js --display-error-details",
     "debug": "node --inspect server/server.js"
   },
   "repository": {
