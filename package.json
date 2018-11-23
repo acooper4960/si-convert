@@ -4,7 +4,7 @@
   "description": "A simple restful api for converting SI units",
   "main": "server.js",
   "scripts": {
-    "test": "webpack -w --progress --colors --config webpack-test.config.js --exit",
+    "test": "webpack -w --progress --colors --config webpack-test.config.js process.exit",
     "start": "rm -rf ./build && webpack --config webpack.config.server.js --display-error-details",
     "debug": "node --inspect server/server.js"
   },
@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@babel/preset-env": "^7.1.5",
-    "mocha": "^5.2.0",
+    "mocha": "^.2.0",
     "mocha-webpack": "^1.1.0",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2"
