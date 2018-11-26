@@ -18,6 +18,10 @@
     "Mocha",
     "Chai"
   ],
+  "engines": {
+    "node": "5.0.0",
+    "npm": "4.6.1"
+  },
   "author": "Alex Cooper",
   "license": "ISC",
   "bugs": {
