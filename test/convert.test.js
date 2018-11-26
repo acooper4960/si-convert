@@ -1,5 +1,5 @@
 import convert from '../server/convert';
-const assert = require('assert')
+const assert = require('assert');
 describe('Convert Test', () => {
   it('minute/minute', () => {
     let calculated = convert('minute/minute');

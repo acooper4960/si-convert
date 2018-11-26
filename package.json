@@ -4,7 +4,7 @@
   "description": "A simple restful api for converting SI units",
   "main": "server.js",
   "scripts": {
-    "test": "webpack -w --progress --colors --config webpack-test.config.js",
+    "test": "webpack --progress --colors --config webpack-test.config.js",
     "start": "rm -rf ./build && webpack --config webpack.config.server.js --display-error-details",
     "debug": "node --inspect server/server.js"
   },
