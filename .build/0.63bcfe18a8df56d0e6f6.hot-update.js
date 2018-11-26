@@ -1,1 +1,0 @@
-exports.id=0,exports.modules={"./server/server.js":function(e,r,s){"use strict";s.r(r);var t=s("express")();t.get("/",function(e,r){throw new Error}),r.default=t},express:function(e,r){e.exports=require("express")}};
