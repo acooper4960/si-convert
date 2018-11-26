@@ -77,7 +77,6 @@ describe('Convert Test', () => {
   it(`min*h*d*°/('*"*h)*L*t`, () => {
     let calculated = convert(`min*h*d*°/('*"*ha)*L*t`);
     assert.equal(calculated.unit_name, 's*s*s*rad/(rad*rad*m^2)*m^3*kg');
-assert.equal(calculated.multiplication_factor, 23096377920634.87);
-
-});
+    assert.equal(calculated.multiplication_factor, 23096377920634.87);
+  });
 });
