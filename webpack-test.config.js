@@ -17,7 +17,7 @@ var config = {
 
   plugins: [
     new WebpackShellPlugin({
-      onBuildExit: "mocha --colors --require --exit spec-helper.js dist/testBundle.js"
+      onBuildExit: "mocha --colors --require --expose-internals spec-helper.js dist/testBundle.js"
     })
   ]
 };
