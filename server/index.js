@@ -3,8 +3,7 @@ import app from './server'
 
 //const PORT = process.env.PORT || 3000;
 let PORT = eval("process.env.PORT || 8080");
-console.log(process.env.PORT)
-console.log('starwars')
+
 try {
   const server = http.createServer(app)
   let currentApp = app
