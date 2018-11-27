@@ -14,7 +14,7 @@ describe('Convert Test', () => {
   it('arcminute*arcminute', () => {
     let calculated = convert('arcminute*arcminute');
     assert.equal(calculated.unit_name, 'rad*rad');
-    assert.equal(calculated.multiplication_factor, 8.461594994075237e-8);
+    assert.equal(calculated.multiplication_factor, 8.461594994075237e-8.toFixed(14));
   });
   it('hour/minute', () => {
     let calculated = convert('hour/minute');
@@ -47,7 +47,7 @@ describe('Convert Test', () => {
   it('(litre*tonne)/(minute*minute)', () => {
     let calculated = convert('(litre*tonne)/(minute*minute)');
     assert.equal(calculated.unit_name, '(m^3*kg)/(s*s)');
-    assert.equal(calculated.multiplication_factor, 0.0002777777777777778);
+    assert.equal(calculated.multiplication_factor, 0.0002777777777777778.toFixed(14));
   });
   it('minute*hour*day*degree*arcminute', () => {
     let calculated = convert('minute*hour*day*degree*arcminute');
@@ -56,7 +56,7 @@ describe('Convert Test', () => {
   });
   it('minute*hour*day*degree*arcminute*arcsecond', () => {
     let calculated = convert('minute*hour*day*degree*arcminute*arcsecond');
-    assert.equal(calculated.multiplication_factor, 0.4593522471155529);
+    assert.equal(calculated.multiplication_factor, 0.4593522471155529.toFixed(14));
     assert.equal(calculated.unit_name, 's*s*s*rad*rad*rad');
   });
   it('minute*hour*day*degree*arcminute*arcsecond*hectare', () => {

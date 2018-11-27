@@ -2,6 +2,7 @@ import CONVERSIONS from './Conversions';
 
 const isNestedEquation = arr => arr.length >1;
 const isOperation = arr => arr.length <= 1;
+const SIG_FIGS = 14; //ideally move to a config file
 
 const convert = (conversionExpressionString) => {
   let chunks = conversionExpressionString.split(/([\(\)\+\-\*\/\.])/);
@@ -9,11 +10,12 @@ const convert = (conversionExpressionString) => {
   let operationsArray = pluckOperationsFromUnits(initializedChunks);
   let calculatedInnerOperationsArray = flattenAndCalculateInnerOperations(operationsArray);
   let calculatedValue = eval(calculatedInnerOperationsArray.join(''));
+  let fixed = calculatedValue.toFixed(SIG_FIGS);
 
   let symbols = operationsArray.map(innerOperationsArray => innerOperationsArray[innerOperationsArray.length-1]).join('');
 
   return {
-    multiplication_factor: calculatedValue,
+    multiplication_factor: fixed,
     unit_name:symbols
   };
 };
