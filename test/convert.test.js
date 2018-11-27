@@ -47,36 +47,36 @@ describe('Convert Test', () => {
   it('(litre*tonne)/(minute*minute)', () => {
     let calculated = convert('(litre*tonne)/(minute*minute)');
     assert.equal(calculated.unit_name, '(m^3*kg)/(s*s)');
-    assert.equal(calculated.multiplication_factor, Number.parseFloat(0.0002777777777777778).toPrecision(14));
+    assert.equal(calculated.multiplication_factor, Number(Number.parseFloat(0.0002777777777777778).toPrecision(14)));
   });
   it('minute*hour*day*degree*arcminute', () => {
     let calculated = convert('minute*hour*day*degree*arcminute');
-    assert.equal(calculated.multiplication_factor, Number.parseFloat(94748.20225045785).toPrecision(14));
+    assert.equal(calculated.multiplication_factor, Number(Number.parseFloat(94748.20225045785).toPrecision(14)));
     assert.equal(calculated.unit_name, 's*s*s*rad*rad');
   });
   it('minute*hour*day*degree*arcminute*arcsecond', () => {
     let calculated = convert('minute*hour*day*degree*arcminute*arcsecond');
-    assert.equal(calculated.multiplication_factor, Number.parseFloat(0.4593522471155529).toPrecision(14));
+    assert.equal(calculated.multiplication_factor, Number(Number.parseFloat(0.4593522471155529).toPrecision(14)));
     assert.equal(calculated.unit_name, 's*s*s*rad*rad*rad');
   });
   it('minute*hour*day*degree*arcminute*arcsecond*hectare', () => {
     let calculated = convert('minute*hour*day*degree*arcminute*arcsecond*hectare');
-    assert.equal(calculated.multiplication_factor, Number.parseFloat(4593.522471155529).toPrecision(14));
+    assert.equal(calculated.multiplication_factor, Number(Number.parseFloat(4593.522471155529).toPrecision(14)));
     assert.equal(calculated.unit_name, 's*s*s*rad*rad*rad*m^2');
   });
   it('minute*hour*day*degree*arcminute*arcsecond*hectare*litre*tonne', () => {
     let calculated = convert('minute*hour*day*degree*arcminute*arcsecond*hectare*litre*tonne');
-    assert.equal(calculated.multiplication_factor, Number.parseFloat(4593.52247115553).toPrecision(14));
+    assert.equal(calculated.multiplication_factor, Number(Number.parseFloat(4593.52247115553).toPrecision(14)));
     assert.equal(calculated.unit_name, 's*s*s*rad*rad*rad*m^2*m^3*kg');
   });
   it('minute*hour*day*degree/(arcminute*arcsecond*hectare)*litre*tonne', () => {
     let calculated = convert('minute*hour*day*degree/(arcminute*arcsecond*hectare)*litre*tonne');
-    assert.equal(calculated.multiplication_factor, Number.parseFloat(23096377920634.87).toPrecision(14));
+    assert.equal(calculated.multiplication_factor, Number(Number.parseFloat(23096377920634.87).toPrecision(14)));
     assert.equal(calculated.unit_name, 's*s*s*rad/(rad*rad*m^2)*m^3*kg');
   });
   it(`min*h*d*°/('*"*h)*L*t`, () => {
     let calculated = convert(`min*h*d*°/('*"*ha)*L*t`);
     assert.equal(calculated.unit_name, 's*s*s*rad/(rad*rad*m^2)*m^3*kg');
-    assert.equal(calculated.multiplication_factor, Number.parseFloat(23096377920634.87).toPrecision(14));
+    assert.equal(calculated.multiplication_factor, Number(Number.parseFloat(23096377920634.87).toPrecision(14)));
   });
 });

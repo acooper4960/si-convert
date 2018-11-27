@@ -10,7 +10,7 @@ const convert = (conversionExpressionString) => {
   let operationsArray = pluckOperationsFromUnits(initializedChunks);
   let calculatedInnerOperationsArray = flattenAndCalculateInnerOperations(operationsArray);
   let calculatedValue = eval(calculatedInnerOperationsArray.join(''));
-  let formatted = Number.parseFloat(calculatedValue).toPrecision(SIG_FIGS);
+  let formatted = Number(Number.parseFloat(calculatedValue).toPrecision(SIG_FIGS));
 
   let symbols = operationsArray.map(innerOperationsArray => innerOperationsArray[innerOperationsArray.length-1]).join('');
 
