@@ -10,12 +10,12 @@ const convert = (conversionExpressionString) => {
   let operationsArray = pluckOperationsFromUnits(initializedChunks);
   let calculatedInnerOperationsArray = flattenAndCalculateInnerOperations(operationsArray);
   let calculatedValue = eval(calculatedInnerOperationsArray.join(''));
-  let fixed = calculatedValue.toFixed(SIG_FIGS);
+  let formatted = Number.parseFloat(calculatedValue).toPrecision(SIG_FIGS);
 
   let symbols = operationsArray.map(innerOperationsArray => innerOperationsArray[innerOperationsArray.length-1]).join('');
 
   return {
-    multiplication_factor: fixed,
+    multiplication_factor: formatted,
     unit_name:symbols
   };
 };
