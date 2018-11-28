@@ -1,5 +1,5 @@
 import CONVERSIONS from './Conversions';
-
+import math from 'mathjs';
 const isNestedEquation = arr => arr.length >1;
 const isOperation = arr => arr.length <= 1;
 const SIG_FIGS = 14; //ideally move to a config file
@@ -9,7 +9,7 @@ const convert = (conversionExpressionString) => {
   let initializedChunks = initializeUnits(chunks);
   let operationsArray = pluckOperationsFromUnits(initializedChunks);
   let calculatedInnerOperationsArray = flattenAndCalculateInnerOperations(operationsArray);
-  let calculatedValue = eval(calculatedInnerOperationsArray.join(''));
+  let calculatedValue = math.eval(calculatedInnerOperationsArray.join(''));
   let formatted = Number(Number.parseFloat(calculatedValue).toPrecision(SIG_FIGS));
 
   let symbols = operationsArray.map(innerOperationsArray => innerOperationsArray[innerOperationsArray.length-1]).join('');
@@ -48,7 +48,7 @@ const flattenAndCalculateInnerOperations = (operationsArray) => {
       if (!isNestedEquation(opsMinusType))
         return opsMinusType[0];
 
-      return eval(opsMinusType.join(''));
+      return math.eval(opsMinusType.join(''));
   });
 };
 
