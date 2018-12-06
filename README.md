@@ -1,5 +1,5 @@
-# si-convert
-For all youre SI conversion needs, look no further!
+# si-conver 
+For all your SI conversion needs, look no further!
 This App is also hosted on: https://si-convert.herokuapp.com/
 
 All js files are minified and managed via Webpack. Travis and Heroku are used for the CI/CD pipeline.
