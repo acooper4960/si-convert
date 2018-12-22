@@ -1,4 +1,4 @@
-# si-conver 
+# si-convert
 For all your SI conversion needs, look no further!
 This App is also hosted on: https://si-convert.herokuapp.com/
 
